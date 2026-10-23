@@ -22,10 +22,10 @@ const WEDDING_CONFIG = {
     { date: "[date]", titre: "La demande en mariage", texte: "[Et il a posé la question…]" }
   ],
   photos: [   // placez les fichiers dans /photos
-    { src: "photos/1.webp", alt: "Emmanuel et Ruth souriants, côte à côte" },
-    { src: "photos/2.webp", alt: "Ruth et Emmanuel se tenant la main" },
-    { src: "photos/3.webp", alt: "Portrait du couple en tenue élégante" },
-    { src: "photos/4.webp", alt: "Le couple riant lors d'une promenade" }
+    { src: "photos/photo-1.jpg", alt: "Emmanuel et Ruth souriants, côte à côte" },
+    { src: "photos/photo-2.jpg", alt: "Ruth et Emmanuel se tenant la main" },
+    { src: "photos/photo-3.jpg", alt: "Portrait du couple en tenue élégante" },
+    { src: "photos/photo-4.jpg", alt: "Le couple riant lors d'une promenade" }
   ],
   programme: [
     { h: "19h00", t: "Accueil des invités", i: "i1" },
