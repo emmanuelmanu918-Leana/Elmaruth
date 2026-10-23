@@ -28,7 +28,7 @@ h2{font:500 clamp(1.9rem,6vw,2.6rem)/1.2 'Bodoni Moda',serif;text-align:center;m
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:#fff;isolation:isolate}
-.hero-bg{position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(74,47,35,.55),rgba(74,47,35,.7)),url(photos/hero.webp) center/cover,linear-gradient(160deg,var(--terra),var(--brun))}
+.hero-bg{position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(74,47,35,.55),rgba(74,47,35,.7)),url(photos/hero.jpg) center/cover,linear-gradient(160deg,var(--terra),var(--brun))}
 .hero-in{padding:5rem 1.25rem 3rem;width:100%;max-width:720px}
 .names{font-size:clamp(3.6rem,17vw,7rem);line-height:1;display:flex;flex-direction:column;margin:1rem 0}
 .amp{font-size:.55em;opacity:.85}
