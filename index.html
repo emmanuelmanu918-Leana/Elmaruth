@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emmanuel &amp; Ruth – 21 mai 2027</title>
+<meta name="description" content="Emmanuel &amp; Ruth ont la joie de vous inviter à leur mariage le 21 mai 2027. Confirmez votre présence en ligne.">
+<meta name="theme-color" content="#C4674A">
+<!-- Remplacez https://VOTRE-SITE.vercel.app par votre vraie adresse -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emmanuel &amp; Ruth – 21 mai 2027">
+<meta property="og:description" content="Vous êtes invité(e) à notre mariage. Ouvrez l'invitation.">
+<meta property="og:image" content="https://VOTRE-SITE.vercel.app/photos/og.jpg">
+<meta property="og:url" content="https://VOTRE-SITE.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emmanuel &amp; Ruth – 21 mai 2027">
+<meta name="twitter:image" content="https://VOTRE-SITE.vercel.app/photos/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C4674A'/%3E%3Ctext x='32' y='40' font-size='24' text-anchor='middle' fill='%23F7F1E8' font-family='serif' font-style='italic'%3EE%26R%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;1,500&family=Cinzel:wght@500&family=Jost:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"Mariage d'Emmanuel & Ruth","startDate":"2027-05-21T19:00:00+01:00","endDate":"2027-05-22T06:00:00+01:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Salle des fêtes La Palmeraie","address":"177, Avenue Kabalo, Lingwala, Kinshasa"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<!-- ENVELOPPE (affichée uniquement si JS actif) -->
+<div id="envelope" class="envelope" role="dialog" aria-label="Invitation" hidden>
+  <div class="env-scene">
+    <div class="env-card"><span class="script">Emmanuel &amp; Ruth</span></div>
+    <div class="env-back"></div>
+    <div class="env-front"></div>
+    <div class="env-flap"></div>
+    <div class="seal" aria-hidden="true">E&nbsp;&amp;&nbsp;R</div>
+  </div>
+  <button id="openBtn" class="btn btn-light" type="button">Ouvrir notre invitation</button>
+  <button id="skipBtn" class="link-skip" type="button">Passer</button>
+</div>
+
+<header class="hero" id="accueil">
+  <div class="hero-bg" role="img" aria-label="Emmanuel et Ruth"></div>
+  <div class="hero-in">
+    <p class="label">Nous nous marions</p>
+    <h1 class="script names"><span>Emmanuel</span><span class="amp">&amp;</span><span>Ruth</span></h1>
+    <p class="hero-date"><span data-c="dateLong">21 mai 2027</span> · <span data-c="ville">Kinshasa</span></p>
+    <div class="countdown" id="countdown" aria-live="off">
+      <div><b data-u="d">--</b><span>jours</span></div>
+      <div><b data-u="h">--</b><span>heures</span></div>
+      <div><b data-u="m">--</b><span>minutes</span></div>
+      <div><b data-u="s">--</b><span>secondes</span></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="#rsvp">Confirmer ma présence</a>
+      <a class="btn btn-ghost" href="#programme">Voir le programme</a>
+    </div>
+  </div>
+</header>
+<div id="sentinel"></div>
+
+<main id="main">
+  <section id="histoire" class="sec">
+    <h2>Notre histoire</h2>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section id="galerie" class="sec alt">
+    <h2>Galerie</h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section id="programme" class="sec">
+    <h2>Le programme</h2>
+    <p class="sub" data-c="dateLong"></p>
+    <div class="prog" id="prog"></div>
+    <noscript><p>Cérémonie et réception le 21 mai 2027, à la salle des fêtes La Palmeraie, 177 Avenue Kabalo, Lingwala (Kinshasa), de 19h à l'aube. Programme détaillé : activez JavaScript.</p></noscript>
+  </section>
+
+  <section id="lieu" class="sec alt">
+    <h2>Le lieu</h2>
+    <address class="addr"><strong data-c="lieuNom">Salle des fêtes La Palmeraie</strong><br><span data-c="lieuAdresse">177, Avenue Kabalo, Commune de Lingwala, Kinshasa</span></address>
+    <div class="map" id="map"></div>
+    <div class="cta-row">
+      <a class="btn" id="routeBtn" href="#" target="_blank" rel="noopener">Ouvrir l'itinéraire</a>
+      <button class="btn btn-ghost" id="icsBtn" type="button">Ajouter au calendrier</button>
+    </div>
+    <details class="info">
+      <summary>Infos pratiques</summary>
+      <ul id="practical"></ul>
+    </details>
+  </section>
+
+  <section id="dresscode" class="sec">
+    <h2>Dress code</h2>
+    <p class="sub" data-c="dressText"></p>
+    <ul class="swatches" id="swatches"></ul>
+  </section>
+
+  <section id="rsvp" class="sec alt">
+    <h2>Confirmer ma présence</h2>
+    <p class="sub">Merci de nous faire part de votre réponse.</p>
+    <form id="rsvpForm" class="form" novalidate>
+      <label>Nom et prénom<input name="nom" required autocomplete="name"></label>
+      <fieldset><legend>Serez-vous des nôtres ?</legend>
+        <label class="radio"><input type="radio" name="presence" value="Oui" checked> Oui, avec joie</label>
+        <label class="radio"><input type="radio" name="presence" value="Non"> Non, avec regret</label>
+      </fieldset>
+      <label>Nombre de personnes<input name="nb" type="number" min="1" max="10" value="1" inputmode="numeric"></label>
+      <label>Régime alimentaire<input name="regime" placeholder="Aucun, végétarien, allergies…"></label>
+      <label>Un mot pour les mariés<textarea name="message" rows="3"></textarea></label>
+      <p class="err" id="formErr" role="alert"></p>
+      <button class="btn" type="submit">Envoyer ma réponse</button>
+    </form>
+    <div class="ok" id="rsvpOk" hidden><p class="script">Merci&nbsp;!</p><p>Votre réponse est bien enregistrée. À très bientôt.</p></div>
+  </section>
+
+  <section id="cadeaux" class="sec">
+    <h2>Liste de mariage</h2>
+    <p class="sub" id="giftText"></p>
+    <div class="cta-row" id="giftLinks"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="script big">Merci d'être là</p>
+  <p class="seal sm" aria-hidden="true">E&nbsp;&amp;&nbsp;R</p>
+  <p class="label">#EmmanuelEtRuth2027</p>
+  <nav><a href="#accueil">Accueil</a><a href="#programme">Programme</a><a href="#lieu">Lieu</a><a href="#rsvp">RSVP</a></nav>
+  <small>Fait avec amour · 2027</small>
+</footer>
+
+<a id="fab" class="btn fab" href="#rsvp">Confirmer ma présence</a>
+<script src="script.js"></script>
+</body>
+</html>
